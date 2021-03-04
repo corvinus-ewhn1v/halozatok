@@ -1,0 +1,98 @@
+﻿
+#kedvencek {
+    background-color: gray;
+    text-align:left;
+}
+div {
+    margin: 20px;
+    padding: 30px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+a {
+    padding: 10px;
+    border-radius: 25px;
+    background-color: orange;
+    color: white;
+}
+img {
+    display: block;
+    margin: auto;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: bold;
+    text-align: center;
+}
+
+#szöveg,
+#megjegyzés,
+#lábjegyzet,
+#cím,
+#menü {
+    padding: 20px;
+}
+
+#cím {
+    background-color: red;
+}
+
+#menü {
+    background-color: deepskyblue;
+}
+
+#szöveg {
+    background-color: gold;
+    text-align: left;
+}
+
+#megjegyzés {
+    background-color: lightgreen;
+}
+
+#lábjegyzet {
+    background-color: hotpink;
+}
+
+#menü {
+    display: flex;
+}
+
+    #menü a {
+        text-decoration: none;
+        color: black;
+        flex: auto;
+    }
+
+@media screen and (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    #fő {
+        display: flex;
+    }
+
+    #menü,
+    #cím {
+        order: -1;
+    }
+
+    #szöveg {
+        flex: 1 1 80%;
+    }
+
+    #megjegyzés {
+        flex: 1 1 20%;
+    }
+}
