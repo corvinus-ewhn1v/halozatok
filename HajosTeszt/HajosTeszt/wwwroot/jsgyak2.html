@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #ide {
+            text-align: center;
+            justify-content: center;
+        }
+        .egymás_mellé {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+            letter-spacing: 20px;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="ide">!</div>
+    <script>
+
+        var faktoriálisR = (n) => {
+            if (n === 0 || n === 1) {
+                return 1;
+            } else {
+                return n * faktoriálisR(n - 1)
+            }
+        }
+
+        let hova = document.getElementById("ide")
+        hova.innerHTML = ""
+
+        for (var s = 0; s < 10; s++) {
+
+            let sor = document.createElement("div");
+            hova.appendChild(sor);
+            sor.classList.add("egymás_mellé")
+
+            for (var o = 0; o <= s; o++) {
+
+                let szám = document.createElement("div")
+                sor.appendChild(szám)
+                szám.innerText = faktoriálisR(s) / (faktoriálisR(o) * (faktoriálisR(s - o)))
+            }
+        }
+    </script>
+</body>
+</html>
