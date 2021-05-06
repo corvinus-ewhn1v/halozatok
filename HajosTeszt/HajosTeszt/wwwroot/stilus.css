@@ -50,3 +50,13 @@ div {
 .kattintható:hover {
     background-color: fuchsia;
 }
+
+.jó{
+    background-color:forestgreen;
+    color:white;
+}
+
+.rossz{
+    background-color: red;
+    color:white;
+}
