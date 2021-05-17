@@ -31,7 +31,31 @@
                 }
             ).then();
 
+
         });
+
+        function viccBetoltes()
+        {
+            fetch('api/jokes')
+                .then(result => {
+                    if (!result.ok) {
+                        console.error(`Hibás letöltés: ${result.status}`);
+                        return null;
+                    }
+                    else {
+                        return result.json();
+                    }
+                })
+                .then(data => {
+                    for (var i = 0; i < data.length; i++) {
+                        document.getElementById("jokeList").innerHTML += data[i].jokeText += "<br/>"
+                    }
+                })
+        }
+
+        window.onload = () => {
+            viccBetoltes();
+        }
     </script>
 </body>
 </html>
